@@ -150,7 +150,7 @@ export default async function callbackHandler(params: {
 
       return { session, user: userByAccount, isNewUser }
     } else {
-      if (user) {
+      /*if (user) {
         // If the user is already signed in and the OAuth account isn't already associated
         // with another user account then we can go ahead and link the accounts safely.
         await linkAccount({ ...account, userId: user.id })
@@ -158,7 +158,7 @@ export default async function callbackHandler(params: {
 
         // As they are already signed in, we don't need to do anything after linking them
         return { session, user, isNewUser }
-      }
+      }*/
 
       // If the user is not signed in and it looks like a new OAuth account then we
       // check there also isn't an user account already associated with the same
