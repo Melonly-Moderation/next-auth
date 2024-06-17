@@ -1,6 +1,6 @@
 name: Bug report
 description: Report an issue so we can improve
-labels: [triage, bug]
+labels: [triage]
 body:
   - type: markdown
     attributes:
@@ -29,13 +29,10 @@ body:
       description: |
         Run this command in your project's root folder and paste the result:
 
-        `npx envinfo --system --binaries --browsers --npmPackages "{next,react,next-auth,@auth/*}"`
-
+        ```sh
+        npx envinfo --system --binaries --browsers --npmPackages "next,react,next-auth,@auth/*"
+        ```
         Alternatively, you can manually gather the version information from your package.json for these packages: "next", "react" and "next-auth". Please also mention your OS and Node.js version, as well as the browser you are using.
-      value: |
-        ```
-        Paste here
-        ```
     validations:
       required: true
   - type: input
